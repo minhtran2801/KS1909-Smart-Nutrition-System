@@ -1,0 +1,62 @@
+{
+  "deploy_settings": {
+    "PROFILE_2": {
+      "skill_id": "amzn1.ask.skill.98128519-25cc-4067-abed-1b9bbbab5bd9",
+      "was_cloned": true,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "9ae5a4654273fbff1940a766e2a748eb"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "6dc58aa91c534449a8b06d755f5f2c26"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:662680828986:function:MY_SMART_NUTRITION",
+            "awsRegion": "us-east-1",
+            "functionName": "NutritionIntake",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "6f3cdc7f-5426-4a1b-b6d1-196c925b2cc8",
+            "codeUri": "lambda/us-east-1_NutritionIntake",
+            "handler": "index.handler",
+            "runtime": "nodejs10.x"
+          }
+        ]
+      }
+    },
+    "default": {
+      "skill_id": "amzn1.ask.skill.2d640c05-031e-4ec8-9365-4a2296b6b49c",
+      "was_cloned": false,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "f512a264a9fc5ee8a97e30f8ae084e43"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "50c440e9a9216e23d12c6533e2d0ae32"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:662680828986:function:NutritionIntake",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda\\us-east-1_NutritionIntake",
+            "functionName": "NutritionIntake",
+            "handler": "index.handler",
+            "revisionId": "d7e3804f-c42b-4f82-b529-4651cff2449a",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}

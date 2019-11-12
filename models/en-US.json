@@ -1,0 +1,1152 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "smart nutrition",
+      "intents": [
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "Im done",
+            "done",
+            "cancel that",
+            "stop",
+            "cancel",
+            "stop it"
+          ]
+        },
+        {
+          "name": "HelpIntent",
+          "slots": [
+            {
+              "name": "help",
+              "type": "help",
+              "samples": [
+                "the {help} please",
+                "{help} please",
+                "can you help with the {help} please",
+                "can you help me with {help} please",
+                "The {help}",
+                "{help}"
+              ]
+            }
+          ],
+          "samples": [
+            "teach me how to use the {help}",
+            "i want to know how to use the {help}",
+            "help me understand the {help}",
+            "help me with the {help}",
+            "tell me about using the {help}",
+            "how might I use the {help}",
+            "how do I use the {help}",
+            "help me with {help}",
+            "how to {help}",
+            "how does the {help} work",
+            "what can i do with the {help}",
+            "how can i {help}",
+            "how do i use this {help}",
+            "can you help me with the {help}",
+            "please help me {help}",
+            "can you help with {help} please",
+            "i need some help",
+            "help",
+            "help me"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "go away",
+            "shut down",
+            "im done with you"
+          ]
+        },
+        {
+          "name": "FoodSearchIntent",
+          "slots": [
+            {
+              "name": "food",
+              "type": "AMAZON.Food",
+              "samples": [
+                "sorry {food}",
+                "it is {food}",
+                "{food}"
+              ]
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "attribute",
+              "type": "food_attribute"
+            }
+          ],
+          "samples": [
+            "how many {attribute} are in {food}",
+            "how much {attribute} is there in {food}",
+            "tell me Facts about  {food}",
+            "Can you search how many {attribute} in {food}",
+            "Can you search how much {attribute} in {food}",
+            "Find how much {attribute} in {food}",
+            "Find how many {attribute} in {food}",
+            "Can you find how much {attribute} in {food}",
+            "Can you find how many {attribute} in {food}",
+            "look into this {food}",
+            "look into {food} please",
+            "look into {food}",
+            "look {food}",
+            "look for {food} please",
+            "search {food} please",
+            "find {food} please",
+            "Can you search {food} please",
+            "Are you able to search {food}",
+            "Are you able to search {food} for me",
+            "Can you search {food} for me",
+            "Search for this {food}",
+            "Search {food}",
+            "interested in {food}",
+            "Im interested to know about {food}",
+            "Anything on {food}",
+            "Let me know what you have {food}",
+            "Do you have anything on {food}",
+            "You got any information on {food}",
+            "What do you have on {food}",
+            "Facts about {food}",
+            "Facts for this {food}",
+            "{food} information",
+            "{food}",
+            "{food} facts",
+            "Facts about this {food}",
+            "Tell me about {food}",
+            "I want to know about {food}",
+            "Can you look up {food}  for me",
+            "Can you look up {food}",
+            "find this {food} for me",
+            "Find this {food}",
+            "Look for {food}",
+            "Look for {food} for me",
+            "Look up {food} for me",
+            "how much {attribute} in {weight} grams of {food}",
+            "how many {attribute} in {weight} grams of {food}",
+            "how many {attribute} are in {weight} grams of {food}",
+            "how many {attribute} is in {weight} grams of {food}",
+            "can you tell me how much {attribute} is in {weight} grams of {food}",
+            "{weight} grams of {food} has how much {attribute}",
+            "how much {attribute} is there in {weight} grams of {food}",
+            "can you look up {weight} grams of {food}",
+            "can you search for",
+            "can you look up",
+            "find",
+            "find {food}",
+            "can you look up {food} for me",
+            "what is the nutritional value of {food}",
+            "search for {food}",
+            "can you find {food} for me",
+            "are you able to look up {food} for me",
+            "find {food} for me",
+            "what is the nutritional value of {food} for me",
+            "look up {food}",
+            "look up {food} please",
+            "is there any information on {food}",
+            "look up please"
+          ]
+        },
+        {
+          "name": "MoreInformationIntent",
+          "slots": [
+            {
+              "name": "attribute",
+              "type": "food_attribute"
+            },
+            {
+              "name": "food",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "is there alot of",
+            "is there alot",
+            "I want to know if there is  {attribute} in that",
+            "I want to know if there is  {attribute} in there",
+            "are there any {attribute} in that",
+            "is there any {attribute} in that",
+            "are there any {attribute}",
+            "is there any {attribute}",
+            "Is there a lot of {attribute}",
+            "what about  {attribute}",
+            "I want to know if there is  {attribute} ",
+            "I want to know about {attribute} in {food}",
+            "How many {attribute} are in there",
+            "How much {attribute} is in there",
+            "how many {attribute} is there",
+            "how many {attribute} is in that",
+            "how much is there",
+            "how much {attribute} is there",
+            "how much {attribute} is in that",
+            "is there much {attribute} in that",
+            "tell me how much {attribute} is in there",
+            "can you tell me how much {attribute} there is",
+            "is there alot of {attribute} in there",
+            "tell me the {attribute} content",
+            "what about the {attribute} content"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "DailyNutrientIntake",
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "gender",
+              "type": "gender"
+            }
+          ],
+          "samples": [
+            "what should a {age} year old  be eating",
+            "I want to know more information on the nutrition intake for an {age} {gender}",
+            "I want to know more information on the nutrition intake for a {age} {gender}",
+            "I want to know more information on the nutrition diet for an {age} {gender}",
+            "I want to know more information on the nutrition diet for a {age} {gender}",
+            "I want to know more information on the recommended nutrition intake for an {age} {gender}",
+            "I want to know more information on the recommended nutrition intake for a {age} {gender}",
+            "I want to know more information on the recommended nutrition diet for an {age} {gender}",
+            "I want to know more information on the recommended nutrition diet for a {age} {gender}",
+            "What is the nutrition guideline for {gender}",
+            "What is your recommendation for {age} {gender}",
+            "What is your recommendation for {gender}",
+            "What is the nutrient intake for {age} year {gender}",
+            "What is the nutrient intake for {gender}",
+            "Find recommended food for {age} year old {gender}",
+            "Find recommended food for {age}",
+            "What type of food should a {age} year old {gender} eat",
+            "Find the daily recommended intake for a {age} year old ",
+            "What should the recommended intake be for an {age} year old {gender}",
+            "What should the recommended intake be for a {age} year old {gender}",
+            "What should the daily recommended intake for an {age} year old {gender} be",
+            "What should the daily recommended intake for a {age} year old {gender} be",
+            "What is the recommended intake for an {age}",
+            "What is the dietary guideline for {gender}",
+            "What is the dietary guideline for a {gender} ",
+            "What is the dietary guideline for an {age} year old",
+            "What is the dietary guideline for a {age} year old",
+            "What is the dietary guideline for {age} ",
+            "What is the dietary guideline for an {age} year old {gender}",
+            "What is the dietary guideline for a {age} year old {gender}",
+            "What should the daily recommended intake be for {gender}",
+            "What should the daily recommended intake be for a {gender}",
+            "What should the daily recommended intake be for an {age} year old",
+            "What should the daily recommended intake be for a {age} year old",
+            "What should the daily recommended intake be for {age}",
+            "What should the daily recommended intake be for an {age} year old {gender}",
+            "What should the daily recommended intake be for a {age} year old {gender}",
+            "What is the recommended intake for {gender}",
+            "What is the recommended intake for a {gender} ",
+            "What is the recommended intake for an {age} year old ",
+            "What is the recommended intake for a {age} year old ",
+            "What is the recommended intake for {age} ",
+            "What is the recommended intake for an {age} year old {gender}",
+            "What is the recommended intake for a {age} year old {gender}",
+            "What is the daily recommended intake for {gender}",
+            "What is the daily recommended intake for a {gender}",
+            "What is the daily recommended intake for an {age} year old",
+            "What is the daily recommended intake for a {age} year old",
+            "What is the daily recommended intake for {age}",
+            "What is the daily recommended intake for an {age} year old {gender}",
+            "is there a daily recommended intake for a {age} year old {gender}",
+            "Is there a recommended daily intake for {gender}",
+            "what should a {age} year old person eat",
+            "what daily food does a {gender} need",
+            "what should a {age} year old {gender} eat",
+            "what is the recommended daily intake for a {age} year old person",
+            "what should a {gender} be eating",
+            "what is the recommended daily food intake for a {age} year old {gender}"
+          ]
+        },
+        {
+          "name": "LogMealIntent",
+          "slots": [
+            {
+              "name": "userID",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Food",
+              "type": "AMAZON.Food"
+            }
+          ],
+          "samples": [
+            "Register food"
+          ]
+        },
+        {
+          "name": "NutrientWhatIsIntent",
+          "slots": [
+            {
+              "name": "nutrient",
+              "type": "food_attribute"
+            }
+          ],
+          "samples": [
+            "tell me about {nutrient} again",
+            "tell me about {nutrient} ",
+            "tell me what is {nutrient} again",
+            "tell me what is {nutrient}",
+            "what is {nutrient} again",
+            "can you tell me what is {nutrient} ",
+            "can you tell me about {nutrient}",
+            "are you able to to tell me what {nutrient} is",
+            "can you tell me what {nutrient} is",
+            "what exactly is {nutrient}",
+            "what is {nutrient}"
+          ]
+        },
+        {
+          "name": "WhatisBMIintent",
+          "slots": [],
+          "samples": [
+            "what is bmi"
+          ]
+        },
+        {
+          "name": "WhatisBMRintent",
+          "slots": [],
+          "samples": [
+            "what is bmr"
+          ]
+        },
+        {
+          "name": "AddUserIntent",
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "height",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "gender",
+              "type": "gender"
+            },
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "I want to register as a new user",
+            "register user",
+            "new person",
+            "I am a new person",
+            "New user"
+          ]
+        },
+        {
+          "name": "updateUserIntent",
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "height",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "gender",
+              "type": "gender"
+            },
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "Update my details",
+            "update {name} details",
+            "update my details",
+            "Update details",
+            "Account update",
+            "Update user details for {name}",
+            "Details update",
+            "Account detail update",
+            "I Would like to update my details"
+          ]
+        },
+        {
+          "name": "BMRcalcIntent",
+          "slots": [
+            {
+              "name": "userage",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "height",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "gender",
+              "type": "gender"
+            },
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "BMR",
+            "Tell me my BMR",
+            "I would like to know my BMR",
+            "BMR Calculation",
+            "check BMR",
+            "Calculate BMR",
+            "Calculate my BMR",
+            "BMR Calculator",
+            "BMR calc",
+            "Launch BMR"
+          ]
+        },
+        {
+          "name": "BMIcalcIntent",
+          "slots": [
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "height",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "BMI Calculator",
+            "bmi",
+            "check bmi",
+            "Calculate BMI",
+            "BMI Calculator",
+            "BMI calculation",
+            "Body mass calculator",
+            "I would like to know my BMI",
+            "Launch BMI"
+          ]
+        },
+        {
+          "name": "RegUserBMIintent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "Registered User BMI",
+            "What is my BMI",
+            "Tell me my BMI",
+            "I would like to access my BMI"
+          ]
+        },
+        {
+          "name": "RegisterFoodIntent",
+          "slots": [
+            {
+              "name": "User",
+              "type": "AMAZON.US_FIRST_NAME"
+            },
+            {
+              "name": "Food",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "Ingredient",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "serving",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{serving} grams of {Ingredient}",
+            "{serving} grams",
+            "I would like to record my ingredients",
+            "record ingredients",
+            "New food"
+          ]
+        },
+        {
+          "name": "NutrientWhereIsIntent",
+          "slots": [
+            {
+              "name": "nutrient",
+              "type": "food_attribute"
+            }
+          ],
+          "samples": [
+            "tell me what the best sources of {nutrient} are",
+            "tell me about the best sources of {nutrient} ",
+            "tell me the best sources of {nutrient} ",
+            "tell me where i would find {nutrient} ",
+            "tell me where {nutrient} is found",
+            "what foods have alot of {nutrient} in them",
+            "what foods have alot {nutrient} in them",
+            "what food is {nutrient} found in",
+            "what is {nutrient} found in",
+            "what foods would i find {nutrient} in",
+            "where would i find {nutrient}",
+            "where is {nutrient} found"
+          ]
+        },
+        {
+          "name": "mealRecordIntent",
+          "slots": [
+            {
+              "name": "meal",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "quantity",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "mealType",
+              "type": "mealTypes"
+            },
+            {
+              "name": "user",
+              "type": "AMAZON.US_FIRST_NAME"
+            },
+            {
+              "name": "serving",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "i had {meal}",
+            "{quantity} ",
+            "{user} ",
+            "{mealType}",
+            "record {mealType}",
+            "{meal}",
+            "{quantity} {meal}",
+            "I had {quantity} {meal}",
+            "Record meals ",
+            "I want to record my meals"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "repeat"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "lamb"
+              }
+            },
+            {
+              "name": {
+                "value": "beef"
+              }
+            },
+            {
+              "name": {
+                "value": "chicken breast"
+              }
+            }
+          ],
+          "name": "nms_food"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "vitamin b"
+              }
+            },
+            {
+              "name": {
+                "value": "vitamin a"
+              }
+            },
+            {
+              "name": {
+                "value": "sugar",
+                "synonyms": [
+                  "sugars"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "saturated fat",
+                "synonyms": [
+                  "saturated fats"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "potassium"
+              }
+            },
+            {
+              "name": {
+                "value": "polyunsaturated fat",
+                "synonyms": [
+                  "polyunsaturated fats"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "iron"
+              }
+            },
+            {
+              "name": {
+                "value": "fiber"
+              }
+            },
+            {
+              "name": {
+                "value": "fat",
+                "synonyms": [
+                  "fats"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cholesterol"
+              }
+            },
+            {
+              "name": {
+                "value": "carbohydrate",
+                "synonyms": [
+                  "carbohydrates"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "calories",
+                "synonyms": [
+                  "calorie"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "calcium"
+              }
+            },
+            {
+              "name": {
+                "value": "protein",
+                "synonyms": [
+                  "proteins"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sodium",
+                "synonyms": [
+                  "salt"
+                ]
+              }
+            }
+          ],
+          "name": "food_attribute"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "woman"
+              }
+            },
+            {
+              "name": {
+                "value": "man",
+                "synonyms": [
+                  "men"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "girl",
+                "synonyms": [
+                  "girls"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "boy",
+                "synonyms": [
+                  "boys"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "female",
+                "synonyms": [
+                  "females"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "male",
+                "synonyms": [
+                  "males"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "she"
+              }
+            },
+            {
+              "name": {
+                "value": "he"
+              }
+            }
+          ],
+          "name": "gender"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "nutrition",
+                "synonyms": [
+                  "my diet",
+                  "dietary guidelines",
+                  "nutrition information"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "application",
+                "synonyms": [
+                  "mobile application",
+                  "mobile app",
+                  "app"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "search",
+                "synonyms": [
+                  "food search function",
+                  "food search",
+                  "search function"
+                ]
+              }
+            }
+          ],
+          "name": "help"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dinner"
+              }
+            },
+            {
+              "name": {
+                "value": "lunch "
+              }
+            },
+            {
+              "name": {
+                "value": "breakfast"
+              }
+            }
+          ],
+          "name": "mealTypes"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "FoodSearchIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "food",
+              "type": "AMAZON.Food",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.235509586493.1495093585206",
+                "elicitation": "Elicit.Slot.235509586493.1495093585206"
+              }
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "attribute",
+              "type": "food_attribute",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "HelpIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "help",
+              "type": "help",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.631786354996.474638146901"
+              }
+            }
+          ]
+        },
+        {
+          "name": "mealRecordIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "meal",
+              "type": "AMAZON.Food",
+              "elicitationRequired": false,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1399070188622.443499184370"
+              }
+            },
+            {
+              "name": "quantity",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "mealType",
+              "type": "mealTypes",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "user",
+              "type": "AMAZON.US_FIRST_NAME",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.235509586493",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "confirming you want me to search for {food}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.235509586493.1495093585206",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you need to give me the name of a food item before i can search"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.235509586493.1495093585206",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "searching for {food}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1196838462282.1140062663711",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what is the food item you want me to search for?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1196838462282.265238110001",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what is the weight you want me to search for?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1196838462282.1140062663711",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "is {food} what you wanted?"
+          },
+          {
+            "type": "PlainText",
+            "value": "are you happy with {food} ?"
+          },
+          {
+            "type": "PlainText",
+            "value": "confirming {food} ?"
+          },
+          {
+            "type": "PlainText",
+            "value": "{food} sounds good"
+          },
+          {
+            "type": "PlainText",
+            "value": "I will search for {food}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1196838462282.265238110001",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "i will search for {weight} grams"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1196838462282",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I will search for {attribute}  in {weight} grams of {food} "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.130811395570.1356714514940",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what attribute are you looking for?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.130811395570.1356714514940",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you want me to search for {attribute}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.747452710445.152240338991",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what's the name of your favorite sport?"
+          },
+          {
+            "type": "PlainText",
+            "value": "so tell me what your favorite sport is"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.747452710445.1206381015820",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "is there a event for {sport} that is your favorite?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.747452710445.1439467447578",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what's the name of your favorite team?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.747452710445",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "so your favorite sport is {sport} and your favorite team is {team}"
+          },
+          {
+            "type": "PlainText",
+            "value": "so your favorite sport is {sport} is that correct?"
+          },
+          {
+            "type": "PlainText",
+            "value": "so your favorite sport is {sport} , your favorite team is {team} and you like the {event} , is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.20764171549.293069391841",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "give me your pin"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.631786354996.474638146901",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I can help with either Food searching, BMI, BMR, registration or general help. What can I do for you today?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1399070188622.443499184370",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ew"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1399070188622.443499184370",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ew"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "71"
+}

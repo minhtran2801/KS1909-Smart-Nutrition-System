@@ -1,0 +1,21 @@
+{
+  "name": "nutrition-interface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.0.0",
+    "ask-sdk-model": "^1.0.0",
+    "crypto": "^1.0.1",
+    "mysql": "^2.16.0",
+    "nonce": "^1.0.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "strict-uri-encode": "^2.0.0"
+  }
+}
