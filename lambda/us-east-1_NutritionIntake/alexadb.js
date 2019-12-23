@@ -8,8 +8,8 @@ const db_con = {
     connection: null,
     connect: function() {
         db_con.connection = mysql.createConnection({
-            host: "alexadatabase.cvoyxhepfo1u.us-east-1.rds.amazonaws.com",
-            user: "alexadb",
+            host: "smart-nutrition-database.cpql6yxingst.us-east-1.rds.amazonaws.com",
+            user: "admin",
             password: "Alexa2019"
         });
     },
@@ -26,7 +26,7 @@ const db_con = {
     },
     getMeal: function(timestamp, mealType, email) {
         db_con.connect();
-        let sql = `SELECT * FROM AlexaDatabase.scan ` +
+        let sql = `SELECT * FROM SmartNutritionDB.scan ` +
                   `WHERE timestamp LIKE '${timestamp}%' ` +
                   `AND mealType = '${mealType}' ` + 
                   `AND email = '${email}'`;
@@ -44,7 +44,7 @@ const db_con = {
     },
      getIngredients: function(email, foodName) {
         db_con.connect();
-        let sql = `SELECT * FROM AlexaDatabase.Ingredients ` +
+        let sql = `SELECT * FROM SmartNutritionDB.Ingredients ` +
                   `WHERE email = '${email}' ` +
                   `AND dishName = '${foodName}'`;
         return new Promise(function (resolve, reject) {
@@ -61,7 +61,7 @@ const db_con = {
     },
     getUser: function(userName) {
         db_con.connect();
-        let sql = `SELECT email FROM AlexaDatabase.user ` +
+        let sql = `SELECT email FROM SmartNutritionDB.user ` +
                   `WHERE firstName = '${userName}'; `;
         return new Promise(function (resolve, reject) {
           db_con.connection.query(sql, function(err, rows) {
@@ -76,7 +76,7 @@ const db_con = {
     },
     getUserWeight: function(userName) {
         db_con.connect();
-        let sql = `SELECT weight FROM AlexaDatabase.user ` +
+        let sql = `SELECT weight FROM SmartNutritionDB.user ` +
                   `WHERE firstName = '${userName}'; `;
         return new Promise(function (resolve, reject) {
           db_con.connection.query(sql, function(err, rows) {
@@ -91,7 +91,7 @@ const db_con = {
     },
      getNumRows: function() {
         db_con.connect();
-        let sql = 'SELECT id FROM AlexaDatabase.food_detection_analysis ORDER BY id DESC LIMIT 1';
+        let sql = 'SELECT id FROM SmartNutritionDB.food_detection_analysis ORDER BY id DESC LIMIT 1';
         return new Promise(function (resolve, reject) {
           db_con.connection.query(sql, function(err, rows) {
               if(err) {
@@ -105,7 +105,7 @@ const db_con = {
     },
     insertSQLNutrition: function(imgid, foodname, email, cal, fat, carb, prot, mealTime, mealType, weight) {
         db_con.connect();
-        let sql = `INSERT INTO AlexaDatabase.food_detection_analysis(imgid, foodname, email, cal, fat, carb, prot) ` +
+        let sql = `INSERT INTO SmartNutritionDB.food_detection_analysis(imgid, foodname, email, cal, fat, carb, prot) ` +
                   `VALUES('${imgid}', '${foodname}', '${email}', '${cal}', '${fat}', '${carb}', '${prot}')`;
        
           db_con.connection.query(sql, function(err, rows) {
@@ -116,7 +116,7 @@ const db_con = {
             }
           });
            
-          sql = `INSERT INTO AlexaDatabase.scan(timestamp, mealType, weight, sensorID, email, img, WI) ` +
+          sql = `INSERT INTO SmartNutritionDB.scan(timestamp, mealType, weight, sensorID, email, img, WI) ` +
                 `VALUES('${mealTime}','${mealType}','${weight}','1','${email}','${imgid}', '500')`;
                 
          db_con.connection.query(sql, function(err, rows) {
@@ -129,7 +129,7 @@ const db_con = {
     },
      insertIngredients: function(email, foodName, ingredients, cal, fat, carb, prot) {
         db_con.connect();
-        let sql = `INSERT INTO AlexaDatabase.Ingredients(email, dishName, ingredients, cal, fat, carb, prot) ` +
+        let sql = `INSERT INTO SmartNutritionDB.Ingredients(email, dishName, ingredients, cal, fat, carb, prot) ` +
                   `VALUES('${email}', '${foodName}', '${ingredients}', '${cal}', '${fat}', '${carb}', '${prot}')`;
        
           db_con.connection.query(sql, function(err, rows) {
@@ -143,7 +143,7 @@ const db_con = {
     updateSQLNutrition: function(imgid, foodname, email, cal, fat, carb, prot, mealTime, mealType) {
         db_con.connect();
 
-        let sql = `UPDATE AlexaDatabase.food_detection_analysis f, AlexaDatabase.scan s ` +
+        let sql = `UPDATE SmartNutritionDB.food_detection_analysis f, SmartNutritionDB.scan s ` +
                   `SET foodname = '${foodname}', cal = '${cal}', fat = '${fat}', carb = '${carb}', prot =  '${prot}' ` +
                    `WHERE s.timestamp LIKE '${mealTime}%' ` +
                     `AND s.mealType = '${mealType}' ` +
